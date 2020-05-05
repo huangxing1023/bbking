@@ -8,6 +8,7 @@ class BbkingBaseApplicationTests {
 
     @Test
     void contextLoads() {
+        //测试
     }
 
 }
