@@ -1,4 +1,8 @@
 package com.family.bbkingweb.controller;
+
+import com.family.bbkingdao.entity.user.User;
+import com.family.bbkingservice.UserService;
+import com.family.bbkingservice.impl.RedisService;
 import com.family.bbkingweb.shiro.ShiroEncryption;
 import org.apache.shiro.authz.annotation.RequiresRoles;
 import org.apache.shiro.crypto.SecureRandomNumberGenerator;

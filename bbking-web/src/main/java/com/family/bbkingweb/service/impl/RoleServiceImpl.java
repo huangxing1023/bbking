@@ -1,9 +1,9 @@
-package com.family.bbkingweb.service.impl;
+package com.family.bbkingservice.impl;
 
-import com.family.bbkingdao.entity.Role;
-import com.family.bbkingdao.entity.User;
+import com.family.bbkingdao.entity.user.Role;
+import com.family.bbkingdao.entity.user.User;
 import com.family.bbkingdao.mapper.RoleMapper;
-import com.family.bbkingweb.service.RoleService;
+import com.family.bbkingservice.RoleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

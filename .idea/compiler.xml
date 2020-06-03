@@ -7,9 +7,6 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="bbking-web" />
-        <module name="bbking-base" />
-        <module name="bbking-service" />
-        <module name="bbking-dao" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

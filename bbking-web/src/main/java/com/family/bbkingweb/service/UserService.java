@@ -1,6 +1,6 @@
-package com.family.bbkingweb.service;
+package com.family.bbkingservice;
 
-import com.family.bbkingdao.entity.User;
+import com.family.bbkingdao.entity.user.User;
 
 import java.util.List;
 

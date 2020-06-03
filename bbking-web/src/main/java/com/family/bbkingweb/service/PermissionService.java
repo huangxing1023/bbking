@@ -1,7 +1,7 @@
-package com.family.bbkingweb.service;
+package com.family.bbkingservice;
 
-import com.family.bbkingdao.entity.Permission;
-import com.family.bbkingdao.entity.Role;
+import com.family.bbkingdao.entity.user.Permission;
+import com.family.bbkingdao.entity.user.Role;
 
 import java.util.List;
 import java.util.Set;

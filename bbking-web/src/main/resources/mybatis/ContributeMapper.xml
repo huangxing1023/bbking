@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.family.bbkingweb.mapper.ContributeMapper">
+    <resultMap type="com.family.bbkingweb.dao.entity.contribute.Contribution" id="contributionResultMap">
+        <!-- 定义主键 ,非常重要。如果是多个字段,则定义多个id -->
+        <!-- property：主键在pojo中的属性名 -->
+        <!-- column：主键在数据库中的列名 -->
+        <id property="id" column="id" />
+        <!-- 定义普通属性 -->
+        <result property="title" column="title" />
+        <result property="videoFieldId" column="videoFieldId" />
+        <result property="imageFieldId" column="imageFieldId" />
+        <result property="view" column="view" />
+        <result property="praise" column="praise" />
+        <result property="coin" column="coin" />
+        <result property="flag" column="sys_flag" />
+        <result property="type" column="type" />
+        <result property="tag" column="tag" />
+        <result property="remark" column="remark" />
+        <result property="createTime" column="create_time" />
+        <result property="creator" column="creator" />
+        <result property="creatorName" column="creatorName" />
+        <result property="imageFieldurl" column="imageFieldurl" />
+        <result property="videoFieldurl" column="videoFieldurl" />
+    </resultMap>
+
+    <resultMap type="com.family.bbkingdao.entity.contribute.ContributionType" id="contributionTypeResultMap">
+        <!-- 定义主键 ,非常重要。如果是多个字段,则定义多个id -->
+        <!-- property：主键在pojo中的属性名 -->
+        <!-- column：主键在数据库中的列名 -->
+        <id property="id" column="id" />
+        <!-- 定义普通属性 -->
+        <result property="typeName" column="type_name" />
+        <result property="flag" column="sys_flag" />
+        <result property="createTime" column="create_time" />
+        <result property="creator" column="creator" />
+        <result property="modifiedTime" column="modify_time" />
+        <result property="modifior" column="modifior" />
+    </resultMap>
+
+    <insert id="saveContribution" parameterType="com.family.bbkingdao.entity.contribute.Contribution">
+        insert t_contribution(`id`,`title`,`videoFieldId`,`imageFieldId`,`view`,`praise`,`coin`,`sys_flag`,`type`,`creator`,`create_time`)
+        values
+        (#{id},#{title},#{videoFieldId},#{imageFieldId},#{view},#{praise},#{coin},#{flag},#{type},#{creator},#{createTime})
+    </insert>
+
+    <select id="getContributionType" parameterType="com.family.bbkingdao.entity.contribute.ContributionType" resultMap="contributionTypeResultMap">
+        select `id`,`type_name`,`create_time`,`creator`,`modify_time`,`modifior`
+        from t_contribution_type
+        <where>
+            <if test="id != null">
+                id = #{id}
+            </if>
+            <if test="typeName != null">
+                type_name = #{typeName}
+            </if>
+            <if test="creator != null">
+                creator = #{creator}
+            </if>
+            <if test="modifior != null">
+                modifior = #{modifior}
+            </if>
+        </where>
+        order by create_time desc ,type_name
+    </select>
+
+    <select id="getContributionById" parameterType="com.family.bbkingdao.entity.contribute.Contribution" resultMap="contributionResultMap">
+        select * from `t_contribution`
+        <where>
+            <if test="id != null">
+                `id` = #{id}
+            </if>
+        </where>
+    </select>
+
+    <select id="getContribution" parameterType="com.family.bbkingdao.entity.contribute.Contribution" resultMap="contributionResultMap">
+        select t1.`id`,t1.`title`,t1.`videoFieldId`,t1.`imageFieldId`,t1.`view`,t1.`praise`,t1.`coin`,t1.`type`,
+        t1.`creator`,t1.`remark`,t4.`nickname` creatorName,t1.`create_time`, t2.`url` imageFieldurl,t3.`url` videoFieldurl
+        from t_contribution t1
+        left join t_upload_file t2 on t1.`imageFieldId` = t2.`id`
+        left join t_upload_file t3 on t1.`videoFieldId` = t3.`id`
+        left join u_user t4 on t1.`creator` = t4.`id`
+        <where>
+            <if test="id != null">
+                t1.`id` = #{id}
+            </if>
+            <if test="title != null">
+                t1.`title` = #{title}
+            </if>
+            <if test="type != null">
+                t1.`type` = #{type}
+            </if>
+        </where>
+        order by t1.`create_time` desc
+    </select>
+
+    <update id="updateContribution" parameterType="com.family.bbkingdao.entity.contribute.Contribution">
+        update t_contribution set `view` = #{view} where `id` = #{id}
+    </update>
+
+</mapper>

@@ -1,18 +1,16 @@
-package com.family.bbkingweb.service.impl;
+package com.family.bbkingservice.impl;
 
-import com.family.bbkingdao.entity.Permission;
-import com.family.bbkingdao.entity.Role;
-import com.family.bbkingdao.entity.User;
-import com.family.bbkingweb.service.LoginService;
-import com.family.bbkingweb.service.PermissionService;
-import com.family.bbkingweb.service.RoleService;
-import com.family.bbkingweb.service.UserService;
+import com.family.bbkingdao.entity.user.Permission;
+import com.family.bbkingdao.entity.user.Role;
+import com.family.bbkingdao.entity.user.User;
+import com.family.bbkingservice.LoginService;
+import com.family.bbkingservice.PermissionService;
+import com.family.bbkingservice.RoleService;
+import com.family.bbkingservice.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.Iterator;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 @Service
 public class LoginServiceImpl implements LoginService {

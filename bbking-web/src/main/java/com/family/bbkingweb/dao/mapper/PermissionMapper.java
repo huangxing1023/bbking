@@ -1,7 +1,7 @@
-package com.family.bbkingweb.dao.mapper;
+package com.family.bbkingdao.mapper;
 
-import com.family.bbkingweb.dao.entity.Permission;
-import com.family.bbkingweb.dao.entity.Role;
+import com.family.bbkingdao.entity.user.Permission;
+import com.family.bbkingdao.entity.user.Role;
 
 import java.util.Set;
 

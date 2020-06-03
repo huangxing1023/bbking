@@ -1,4 +1,4 @@
-package com.family.bbkingweb.service.impl;
+package com.family.bbkingservice.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
