@@ -1,9 +1,9 @@
-package com.family.bbkingservice.impl;
+package com.family.bbkingweb.service.impl;
 
 import com.family.bbkingdao.entity.Permission;
 import com.family.bbkingdao.entity.Role;
 import com.family.bbkingdao.mapper.PermissionMapper;
-import com.family.bbkingservice.PermissionService;
+import com.family.bbkingweb.service.PermissionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

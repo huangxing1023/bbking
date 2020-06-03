@@ -1,11 +1,9 @@
-package com.family.bbkingservice;
+package com.family.bbkingweb.service;
 
 import com.family.bbkingdao.entity.Permission;
 import com.family.bbkingdao.entity.Role;
-import com.family.bbkingdao.entity.User;
 
 import java.util.List;
-import java.util.Map;
 import java.util.Set;
 
 public interface PermissionService {

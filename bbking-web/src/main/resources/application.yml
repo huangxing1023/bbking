@@ -36,7 +36,7 @@ spring:
 
 mybatis:
   mapper-locations : classpath*:mybatis/*.xml
-  type-aliases-package : com.family.bbkingdao.entity
+  type-aliases-package : com.family.bbkingweb.dao.entity
 
 logging:
   config: bbking-web/src/main/resources/logback.xml

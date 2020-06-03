@@ -1,4 +1,4 @@
-package com.family.bbkingdao.entity;
+package com.family.bbkingweb.dao.entity;
 
 import java.io.Serializable;
 

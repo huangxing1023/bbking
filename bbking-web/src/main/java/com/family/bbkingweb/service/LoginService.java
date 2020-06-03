@@ -1,4 +1,4 @@
-package com.family.bbkingservice;
+package com.family.bbkingweb.service;
 
 import com.family.bbkingdao.entity.User;
 
