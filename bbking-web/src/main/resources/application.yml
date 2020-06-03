@@ -1,15 +1,17 @@
 spring:
   datasource:
     # jdbc:mysql://localhost:3306/test 数据库地址
-    url: jdbc:mysql://120.79.197.112:3306/bbking?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+    url: jdbc:mysql://120.79.197.112:3306/bbking?useUnicode=true&characterEncoding=utf-8&useLegacyDatetimeCode=false&serverTimezone=Asia/Shanghai
     username: root # 数据库用户名
     password: ct950916  # 数据库密码
     driver-class-name: com.mysql.jdbc.Driver  # 数据库驱动
-  #profiles:
-    #active: dev
+
+  resources:
+    static-locations: classpath:/templates/,classpath:/static/
 
   application:
     name:springboot-rabbitmq
+
   rabbitmq:
     host: 127.0.0.1
     port: 5672
@@ -19,7 +21,12 @@ spring:
     virtual-host: /
 
   thymeleaf:
-    cache: false
+    cache: true
+    check-template-location: true
+    enabled: true
+    encoding: utf-8
+    prefix: /
+    suffix: .html
 
   redis:
     database: 0
@@ -33,10 +40,24 @@ spring:
         max-wait: -1ms
     lettuce:
       shutdown-timeout: 100ms
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 100MB
+  jackson:
+    time-zone: Asia/Shanghai
+  #配置rabbitMq 服务器
+
 
 mybatis:
   mapper-locations : classpath*:mybatis/*.xml
-  type-aliases-package : com.family.bbkingweb.dao.entity
+  type-aliases-package : com.family.bbkingdao.entity
 
 logging:
   config: bbking-web/src/main/resources/logback.xml
+
+#配置外部访问文件 file:/E:/fileUpload/
+cbs:
+  imagesPath: file:/E:/Resources/images/
+  viedosPath: file:/E:/Resources/videos/
+  audioPath: file:/E:/Resources/audio/
