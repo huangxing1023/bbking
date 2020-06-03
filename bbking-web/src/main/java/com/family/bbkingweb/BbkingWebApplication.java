@@ -9,8 +9,8 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 import javax.annotation.PostConstruct;
 import java.util.TimeZone;
 
-@SpringBootApplication(scanBasePackages = {"com.family.bbkingweb","com.family.bbkingservice","com.family.bbkingdao"})
-@MapperScan("com.family.bbkingdao.mapper")
+@SpringBootApplication(scanBasePackages = {"com.family.bbkingweb","com.family.bbkingweb.service","com.family.bbkingdao"})
+@MapperScan("com.family.bbkingweb.dao.mapper.)
 @EnableScheduling
 @EnableCaching
 public class BbkingWebApplication {

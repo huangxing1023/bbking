@@ -1,8 +1,8 @@
 package com.family.bbkingweb.controller;
 
-import com.family.bbkingdao.entity.user.User;
-import com.family.bbkingdao.entity.contribute.UploadFile;
-import com.family.bbkingservice.UploadService;
+import com.family.bbkingweb.dao.entity.user.User;
+import com.family.bbkingweb.dao.entity.contribute.UploadFile;
+import com.family.bbkingweb.service.UploadService;
 import org.apache.commons.collections.map.HashedMap;
 import org.apache.shiro.SecurityUtils;
 import org.slf4j.Logger;

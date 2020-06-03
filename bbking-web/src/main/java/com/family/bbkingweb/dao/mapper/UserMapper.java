@@ -1,6 +1,6 @@
-package com.family.bbkingdao.mapper;
+package com.family.bbkingweb.dao.mapper;
 
-import com.family.bbkingdao.entity.user.User;
+import com.family.bbkingweb.dao.entity.user.User;
 
 import java.util.List;
 

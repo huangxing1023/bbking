@@ -1,4 +1,4 @@
-package com.family.bbkingdao.entity.common;
+package com.family.bbkingweb.dao.entity.common;
 
 import org.apache.poi.ss.formula.functions.T;
 

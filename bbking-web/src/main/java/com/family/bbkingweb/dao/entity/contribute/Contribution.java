@@ -2,7 +2,6 @@ package com.family.bbkingweb.dao.entity.contribute;
 
 import java.io.Serializable;
 import java.util.List;
-import com.family.bbkingweb.dao.entity.contribute;
 
 /**
  * 稿件信息

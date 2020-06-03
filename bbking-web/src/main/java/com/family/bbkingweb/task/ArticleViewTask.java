@@ -1,7 +1,7 @@
 package com.family.bbkingweb.task;
 
-import com.family.bbkingdao.entity.contribute.Contribution;
-import com.family.bbkingservice.ContributeService;
+import com.family.bbkingweb.dao.entity.contribute.Contribution;
+import com.family.bbkingweb.service.ContributeService;
 import com.family.bbkingweb.util.RedisUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;

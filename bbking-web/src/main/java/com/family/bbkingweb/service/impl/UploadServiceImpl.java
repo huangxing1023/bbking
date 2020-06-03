@@ -1,8 +1,8 @@
-package com.family.bbkingservice.impl;
+package com.family.bbkingweb.service.impl;
 
-import com.family.bbkingdao.entity.contribute.UploadFile;
-import com.family.bbkingdao.mapper.UploadFileMapper;
-import com.family.bbkingservice.UploadService;
+import com.family.bbkingweb.dao.entity.contribute.UploadFile;
+import com.family.bbkingweb.dao.mapper.UploadFileMapper;
+import com.family.bbkingweb.service.UploadService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

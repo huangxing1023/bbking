@@ -1,6 +1,6 @@
-package com.family.bbkingdao.entity.user;
+package com.family.bbkingweb.dao.entity.user;
 
-import com.family.bbkingdao.entity.user.Permission;
+import com.family.bbkingweb.dao.entity.user.Permission;
 
 import java.io.Serializable;
 import java.util.Set;

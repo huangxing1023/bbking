@@ -1,9 +1,9 @@
 package com.family.bbkingweb.shiro;
 
-import com.family.bbkingdao.entity.user.Permission;
-import com.family.bbkingdao.entity.user.Role;
-import com.family.bbkingdao.entity.user.User;
-import com.family.bbkingservice.LoginService;
+import com.family.bbkingweb.dao.entity.user.Permission;
+import com.family.bbkingweb.dao.entity.user.Role;
+import com.family.bbkingweb.dao.entity.user.User;
+import com.family.bbkingweb.service.LoginService;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.shiro.authc.*;
 import org.apache.shiro.authz.AuthorizationInfo;

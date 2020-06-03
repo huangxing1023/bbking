@@ -1,4 +1,4 @@
-package com.family.bbkingdao.entity.contribute;
+package com.family.bbkingweb.dao.entity.contribute;
 
 import java.io.Serializable;
 import java.util.List;

@@ -1,24 +1,16 @@
 package com.family.bbkingweb;
 
-import com.family.bbkingbase.common.CodeMsg;
-import com.family.bbkingdao.entity.User;
-import com.family.bbkingservice.UserService;
-import com.family.bbkingservice.impl.RedisService;
+import com.family.bbkingweb.common.Result;
+import com.family.bbkingweb.dao.entity.user.User;
+import com.family.bbkingweb.service.UserService;
+import com.family.bbkingweb.service.impl.RedisService;
 import com.family.bbkingweb.shiro.ShiroEncryption;
-import com.family.bbkingbase.common.Result;
-import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.apache.shiro.authz.annotation.RequiresRoles;
 import org.apache.shiro.crypto.SecureRandomNumberGenerator;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
 
 import java.util.HashMap;
 import java.util.List;

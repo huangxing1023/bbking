@@ -1,10 +1,10 @@
 package com.family.bbkingweb.controller;
 
-import com.family.bbkingdao.entity.common.PageBean;
-import com.family.bbkingdao.entity.user.User;
-import com.family.bbkingdao.entity.contribute.Contribution;
-import com.family.bbkingdao.entity.contribute.ContributionTypeInfo;
-import com.family.bbkingservice.ContributeService;
+import com.family.bbkingweb.dao.entity.common.PageBean;
+import com.family.bbkingweb.dao.entity.user.User;
+import com.family.bbkingweb.dao.entity.contribute.Contribution;
+import com.family.bbkingweb.dao.entity.contribute.ContributionTypeInfo;
+import com.family.bbkingweb.service.ContributeService;
 import com.family.bbkingweb.aspect.PageView;
 import com.family.bbkingweb.aspect.PraiseView;
 import org.apache.commons.collections.map.HashedMap;

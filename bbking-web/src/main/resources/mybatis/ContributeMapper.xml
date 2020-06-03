@@ -26,7 +26,7 @@
         <result property="videoFieldurl" column="videoFieldurl" />
     </resultMap>
 
-    <resultMap type="com.family.bbkingdao.entity.contribute.ContributionType" id="contributionTypeResultMap">
+    <resultMap type="com.family.bbkingweb.dao.entity.contribute.ContributionType" id="contributionTypeResultMap">
         <!-- 定义主键 ,非常重要。如果是多个字段,则定义多个id -->
         <!-- property：主键在pojo中的属性名 -->
         <!-- column：主键在数据库中的列名 -->
@@ -40,13 +40,13 @@
         <result property="modifior" column="modifior" />
     </resultMap>
 
-    <insert id="saveContribution" parameterType="com.family.bbkingdao.entity.contribute.Contribution">
+    <insert id="saveContribution" parameterType="com.family.bbkingweb.dao.entity.contribute.Contribution">
         insert t_contribution(`id`,`title`,`videoFieldId`,`imageFieldId`,`view`,`praise`,`coin`,`sys_flag`,`type`,`creator`,`create_time`)
         values
         (#{id},#{title},#{videoFieldId},#{imageFieldId},#{view},#{praise},#{coin},#{flag},#{type},#{creator},#{createTime})
     </insert>
 
-    <select id="getContributionType" parameterType="com.family.bbkingdao.entity.contribute.ContributionType" resultMap="contributionTypeResultMap">
+    <select id="getContributionType" parameterType="com.family.bbkingweb.dao.entity.contribute.ContributionType" resultMap="contributionTypeResultMap">
         select `id`,`type_name`,`create_time`,`creator`,`modify_time`,`modifior`
         from t_contribution_type
         <where>
@@ -66,7 +66,7 @@
         order by create_time desc ,type_name
     </select>
 
-    <select id="getContributionById" parameterType="com.family.bbkingdao.entity.contribute.Contribution" resultMap="contributionResultMap">
+    <select id="getContributionById" parameterType="com.family.bbkingweb.dao.entity.contribute.Contribution" resultMap="contributionResultMap">
         select * from `t_contribution`
         <where>
             <if test="id != null">
@@ -75,7 +75,7 @@
         </where>
     </select>
 
-    <select id="getContribution" parameterType="com.family.bbkingdao.entity.contribute.Contribution" resultMap="contributionResultMap">
+    <select id="getContribution" parameterType="com.family.bbkingweb.dao.entity.contribute.Contribution" resultMap="contributionResultMap">
         select t1.`id`,t1.`title`,t1.`videoFieldId`,t1.`imageFieldId`,t1.`view`,t1.`praise`,t1.`coin`,t1.`type`,
         t1.`creator`,t1.`remark`,t4.`nickname` creatorName,t1.`create_time`, t2.`url` imageFieldurl,t3.`url` videoFieldurl
         from t_contribution t1
@@ -96,7 +96,7 @@
         order by t1.`create_time` desc
     </select>
 
-    <update id="updateContribution" parameterType="com.family.bbkingdao.entity.contribute.Contribution">
+    <update id="updateContribution" parameterType="com.family.bbkingweb.dao.entity.contribute.Contribution">
         update t_contribution set `view` = #{view} where `id` = #{id}
     </update>
 

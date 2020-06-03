@@ -1,6 +1,6 @@
 package com.family.bbkingweb.aspect;
 
-import com.family.bbkingdao.entity.contribute.Contribution;
+import com.family.bbkingweb.dao.entity.contribute.Contribution;
 import com.family.bbkingweb.util.IpUtils;
 import com.family.bbkingweb.util.RedisUtils;
 import lombok.extern.slf4j.Slf4j;

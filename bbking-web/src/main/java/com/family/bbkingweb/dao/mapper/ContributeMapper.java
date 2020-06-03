@@ -1,7 +1,7 @@
-package com.family.bbkingdao.mapper;
+package com.family.bbkingweb.dao.mapper;
 
-import com.family.bbkingdao.entity.contribute.Contribution;
-import com.family.bbkingdao.entity.contribute.ContributionType;
+import com.family.bbkingweb.dao.entity.contribute.Contribution;
+import com.family.bbkingweb.dao.entity.contribute.ContributionType;
 
 import java.util.List;
 

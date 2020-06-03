@@ -1,10 +1,10 @@
-package com.family.bbkingservice.impl;
+package com.family.bbkingweb.service.impl;
 
-import com.family.bbkingdao.entity.contribute.Contribution;
-import com.family.bbkingdao.entity.contribute.ContributionType;
-import com.family.bbkingdao.entity.contribute.ContributionTypeInfo;
-import com.family.bbkingdao.mapper.ContributeMapper;
-import com.family.bbkingservice.ContributeService;
+import com.family.bbkingweb.dao.entity.contribute.Contribution;
+import com.family.bbkingweb.dao.entity.contribute.ContributionType;
+import com.family.bbkingweb.dao.entity.contribute.ContributionTypeInfo;
+import com.family.bbkingweb.dao.mapper.ContributeMapper;
+import com.family.bbkingweb.service.ContributeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;

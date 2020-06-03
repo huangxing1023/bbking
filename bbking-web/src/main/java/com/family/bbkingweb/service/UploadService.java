@@ -1,6 +1,6 @@
-package com.family.bbkingservice;
+package com.family.bbkingweb.service;
 
-import com.family.bbkingdao.entity.contribute.UploadFile;
+import com.family.bbkingweb.dao.entity.contribute.UploadFile;
 
 public interface UploadService {
     int saveUploadFile(UploadFile uploadFile);

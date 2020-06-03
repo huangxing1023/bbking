@@ -1,7 +1,7 @@
-package com.family.bbkingservice;
+package com.family.bbkingweb.service;
 
-import com.family.bbkingdao.entity.contribute.Contribution;
-import com.family.bbkingdao.entity.contribute.ContributionTypeInfo;
+import com.family.bbkingweb.dao.entity.contribute.Contribution;
+import com.family.bbkingweb.dao.entity.contribute.ContributionTypeInfo;
 
 import java.util.List;
 

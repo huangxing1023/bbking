@@ -1,8 +1,8 @@
-package com.family.bbkingservice.impl;
+package com.family.bbkingweb.service.impl;
 
-import com.family.bbkingdao.entity.user.User;
-import com.family.bbkingdao.mapper.UserMapper;
-import com.family.bbkingservice.UserService;
+import com.family.bbkingweb.dao.entity.user.User;
+import com.family.bbkingweb.dao.mapper.UserMapper;
+import com.family.bbkingweb.service.UserService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
