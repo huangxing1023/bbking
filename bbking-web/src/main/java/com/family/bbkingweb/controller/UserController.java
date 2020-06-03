@@ -1,5 +1,6 @@
 package com.family.bbkingweb.controller;
 
+import com.family.bbkingweb.common.Result;
 import com.family.bbkingweb.dao.entity.user.User;
 import com.family.bbkingweb.service.UserService;
 import com.family.bbkingweb.service.impl.RedisService;

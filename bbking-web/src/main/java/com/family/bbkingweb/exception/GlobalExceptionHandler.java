@@ -1,7 +1,7 @@
 package com.family.bbkingweb.exception;
 
-import com.family.bbkingbase.common.CodeMsg;
-import com.family.bbkingbase.common.Result;
+import com.family.bbkingweb.common.CodeMsg;
+import com.family.bbkingweb.common.Result;
 import org.apache.shiro.authz.AuthorizationException;
 import org.apache.shiro.authz.UnauthorizedException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
@@ -23,7 +23,7 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(UnauthorizedException.class)
     @ResponseBody
-    public Result defaultExceptionHandler(HttpServletRequest req,Exception e){
+    public Result defaultExceptionHandler(HttpServletRequest req, Exception e){
         CodeMsg codeMsg = new CodeMsg(500,"对不起，你没有访问权限！");
         return new Result(codeMsg,null);
     }

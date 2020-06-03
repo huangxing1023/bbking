@@ -1,5 +1,6 @@
 package com.family.bbkingweb;
 
+import com.family.bbkingweb.dao.entity.user.User;
 import com.family.bbkingweb.service.UserService;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.AuthenticationException;

@@ -19,25 +19,20 @@
     </properties>
 
     <dependencies>
-        <!-- 添加 demo-service 的依赖 -->
-        <dependency>
-            <groupId>com.family</groupId>
-            <artifactId>bbking-service</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-            <scope>compile</scope>
-        </dependency>
-
-        <!--添加demo-base的依赖-->
-        <dependency>
-            <groupId>com.family</groupId>
-            <artifactId>bbking-base</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-            <scope>compile</scope>
-        </dependency>
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjrt</artifactId>
+            <version>1.6.12</version>
+        </dependency>
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjweaver</artifactId>
+            <version>1.6.12</version>
         </dependency>
 
         <dependency>
